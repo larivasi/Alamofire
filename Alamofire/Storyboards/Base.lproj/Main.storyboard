@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ez0-dA-Y5Y">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Courses-->
+        <scene sceneID="WWr-AZ-6J1">
+            <objects>
+                <tableViewController id="8Pa-DY-6L5" customClass="CoursesTableViewController" customModule="NetworkAlamofire" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="IRv-B1-H1m">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="125" id="bVd-rc-YHc" customClass="CourseCell" customModule="NetworkAlamofire" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="320" height="125"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="cell" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bVd-rc-YHc" id="sLv-JB-n5O">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="125"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IQ5-ZB-7BC">
+                                            <rect key="frame" x="0.0" y="-0.5" width="125" height="125"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="IQ5-ZB-7BC" secondAttribute="height" multiplier="1:1" id="psX-iL-dv2"/>
+                                            </constraints>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="gbE-zM-4os">
+                                            <rect key="frame" x="140" y="14" width="165" height="96"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of course" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mtg-bw-tfP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="139" height="47"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="47" id="hCa-n6-fPc"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="yBC-Bx-sPe">
+                                                    <rect key="frame" x="0.0" y="62" width="43" height="34"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lessons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7h-sd-SXA">
+                                                            <rect key="frame" x="0.0" y="0.0" width="43" height="13.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="13.5" id="FpX-kl-VgJ"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJ9-HZ-1qG">
+                                                            <rect key="frame" x="0.0" y="20.5" width="43" height="13.5"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="gbE-zM-4os" firstAttribute="leading" secondItem="sLv-JB-n5O" secondAttribute="leading" constant="140" id="4sE-e8-Kk4"/>
+                                        <constraint firstItem="gbE-zM-4os" firstAttribute="leading" secondItem="IQ5-ZB-7BC" secondAttribute="trailing" constant="15" id="ALo-ac-Jm2"/>
+                                        <constraint firstItem="IQ5-ZB-7BC" firstAttribute="centerY" secondItem="gbE-zM-4os" secondAttribute="centerY" id="LKy-FG-ZEB"/>
+                                        <constraint firstAttribute="bottom" secondItem="gbE-zM-4os" secondAttribute="bottom" constant="15" id="Y9e-CS-lT0"/>
+                                        <constraint firstItem="gbE-zM-4os" firstAttribute="top" secondItem="sLv-JB-n5O" secondAttribute="top" constant="14" id="knm-n3-iLP"/>
+                                        <constraint firstAttribute="trailing" secondItem="gbE-zM-4os" secondAttribute="trailing" constant="15" id="rty-v2-wIM"/>
+                                        <constraint firstItem="IQ5-ZB-7BC" firstAttribute="leading" secondItem="sLv-JB-n5O" secondAttribute="leading" id="sUs-wB-NYN"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="courseImage" destination="IQ5-ZB-7BC" id="cmh-5q-uoj"/>
+                                    <outlet property="courseNameLabel" destination="Mtg-bw-tfP" id="6nM-o5-zxg"/>
+                                    <outlet property="numberOfLessons" destination="i7h-sd-SXA" id="ng5-bF-iW4"/>
+                                    <outlet property="numberOfTests" destination="AJ9-HZ-1qG" id="BpJ-Mg-SSm"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8Pa-DY-6L5" id="OnJ-L6-6Sb"/>
+                            <outlet property="delegate" destination="8Pa-DY-6L5" id="Jji-Bd-nrG"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Courses" id="BnT-s0-NvL">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="HHz-ML-t1t">
+                            <connections>
+                                <segue destination="Kvu-gh-hpB" kind="presentation" id="bdK-OL-3FP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TS8-ux-IGy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="183.75" y="0.0"/>
+        </scene>
+        <!--Test-->
+        <scene sceneID="AJ5-G3-Ci7">
+            <objects>
+                <viewController id="Kvu-gh-hpB" customClass="NewCourseViewController" customModule="NetworkAlamofire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZTd-JJ-xom">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="giX-E0-CAc">
+                                <rect key="frame" x="15" y="71" width="290" height="132"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Course title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NAs-li-nfY">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of lessons" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xg3-WL-A5X">
+                                        <rect key="frame" x="0.0" y="49" width="290" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of tests" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aoz-f2-Jcg">
+                                        <rect key="frame" x="0.0" y="98" width="290" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ppT-gd-fdV">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
+                                <color key="barTintColor" systemColor="systemBackgroundColor"/>
+                                <items>
+                                    <navigationItem title="Add new course" id="P0j-EM-EcG">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="O6R-hC-g7F">
+                                            <connections>
+                                                <action selector="cancelButtonPressed:" destination="Kvu-gh-hpB" id="wZd-LC-Ep1"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="wlt-0g-7li">
+                                            <connections>
+                                                <action selector="saveButtonPressed:" destination="Kvu-gh-hpB" id="iXy-if-rqP"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Image URL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JAU-fu-XOm">
+                                <rect key="frame" x="15" y="211" width="290" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="imageURL:" destination="TCM-KR-apb" eventType="editingDidEnd" id="DfH-IG-o8f"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mJ3-tz-8Eq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="giX-E0-CAc" firstAttribute="leading" secondItem="mJ3-tz-8Eq" secondAttribute="leading" constant="15" id="CUS-xf-d4t"/>
+                            <constraint firstItem="ppT-gd-fdV" firstAttribute="top" secondItem="mJ3-tz-8Eq" secondAttribute="top" id="DIc-bi-f1N"/>
+                            <constraint firstItem="ppT-gd-fdV" firstAttribute="leading" secondItem="mJ3-tz-8Eq" secondAttribute="leading" id="OEy-w5-9tz"/>
+                            <constraint firstItem="mJ3-tz-8Eq" firstAttribute="trailing" secondItem="giX-E0-CAc" secondAttribute="trailing" constant="15" id="bE3-rK-X2t"/>
+                            <constraint firstItem="mJ3-tz-8Eq" firstAttribute="trailing" secondItem="ppT-gd-fdV" secondAttribute="trailing" id="x0q-fd-wRC"/>
+                            <constraint firstItem="giX-E0-CAc" firstAttribute="centerX" secondItem="ZTd-JJ-xom" secondAttribute="centerX" id="xa8-4f-rrk"/>
+                            <constraint firstItem="giX-E0-CAc" firstAttribute="top" secondItem="ppT-gd-fdV" secondAttribute="bottom" constant="15" id="zva-G1-Psj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Test" style="browser" id="F9Z-Vv-tJJ">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="w5f-Qf-T5J">
+                            <connections>
+                                <action selector="cancelButtonPressed:" destination="Kvu-gh-hpB" id="LZx-tM-G5Z"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="nSC-UX-Sgx">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="Kvu-gh-hpB" id="mLX-7c-tpu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="courseTitleTF" destination="NAs-li-nfY" id="oXc-2l-BVY"/>
+                        <outlet property="imageURL" destination="JAU-fu-XOm" id="cBM-Pb-qvw"/>
+                        <outlet property="numberOfLessonsTF" destination="xg3-WL-A5X" id="81B-oi-z6w"/>
+                        <outlet property="numberOfTestsTF" destination="Aoz-f2-Jcg" id="YOa-nd-Fvf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rjy-MW-bzj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="TCM-KR-apb" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1151" y="-1"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GQU-Fl-FTW">
+            <objects>
+                <navigationController id="ez0-dA-Y5Y" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="cqO-21-ipE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8Pa-DY-6L5" kind="relationship" relationship="rootViewController" id="KN9-N2-7eu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c9d-AD-Zgk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-718" y="-1"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
